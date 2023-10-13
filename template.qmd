@@ -72,11 +72,6 @@ import <- function(x)
 pkgs |> import()
 ```
 
-
-## More Information
-
-You can learn more about controlling the appearance of HTML output here: <https://quarto.org/docs/output-formats/html-basics.html>
-
 ## Custom CSS - Logo example
 
 A chunk used here includes a Stanford logo by generating a custom `styles.css` for the banner, which can be included in the quarto document.
@@ -123,7 +118,6 @@ library(knitr)
 library(kableExtra)
 library(RColorBrewer)
 library(scales)
-library(geomorph)
 ```
 
 This is an example of a static plot using Stanford graphical profile colors from [Stanford Identity Guide](https://identity.stanford.edu/design-elements/color/primary-colors/).
@@ -156,4 +150,6 @@ This is an example of a interactive variant of the same plot.
 plotly::ggplotly(p)
 ```
 
+## More Information
 
+You can learn more about controlling the appearance of HTML output here: <https://quarto.org/docs/output-formats/html-basics.html>
