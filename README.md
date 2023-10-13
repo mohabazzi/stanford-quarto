@@ -1,4 +1,4 @@
-# <%= title %> Format
+# Stanford Quarto Format
 
 ## Installing
 
