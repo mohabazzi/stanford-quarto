@@ -3,7 +3,7 @@ title: "Title"
 title-block-banner: "#2E2D29"
 title-block-banner-color: "#FFFFFF"
 subtitle: "Subtitle"
-description: "Description"
+description: "Stanford Doer School of Sustainability, Paleobiology Lab"
 date: last-modified
 date-format: "YYYY-MM-DD"
 mainfont: Figtree
@@ -17,7 +17,7 @@ crossref:
 author:
   - name: Mohamad Bazzi
     orcid: 0000-0002-9495-0781
-    email: bazzi@ug.kth.se
+    email: bazzi@stanford.edu
     url: https://github.com/mohabazzi
     affiliations:
       - name: Stanford University
