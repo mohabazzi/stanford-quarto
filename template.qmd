@@ -29,6 +29,8 @@ highlight-style: pygments
 fig-cap-location: top
 format:
   stanford-quarto-html: default
+editor_options: 
+  chunk_output_type: console
 ---
 
 ## Quarto
@@ -101,7 +103,10 @@ styles_css <-
 }" |> sprintf(iuri)
 
 message("Wrote background logo styles to styles.css")
+
 readr::write_file(styles_css, "styles.css")
+
+knitr::include_graphics(path = "_extensions/stanford-quarto/img/logo_text.png")
 ```
 
 ## Plots
@@ -128,17 +133,19 @@ This is an example of a static plot using Stanford graphical profile colors from
 library(dplyr)
 library(ggplot2)
 
-p <- 
-  iris |> 
+p <- iris |> 
   ggplot(aes(x = Species, y = Sepal.Width, colour = Species)) +
   geom_boxplot(position = position_dodge2(preserve = "single")) +
-  # geom_text(aes(label = paste0("n=", n)), nudge_y = 3) +
   labs(
-    x = "Iris species dataset", y="Sepal Width",
-    title = "Seminal ggplot2 boxplot chart example",
-    subtitle = "A plot that is only useful for demonstration purposes",
+    x = "", y="Sepal Width",
+    title = "Box and whisker plot example",
+    subtitle = "Iris species dataset",
     caption = "") +
-  theme(axis.text.y=element_blank())
+  scale_fill_manual(values =  c("#B83A4B","#2D716F","#2E2D29")) +
+  scale_color_manual(values = c("#B83A4B","#2D716F","#2E2D29")) +
+  theme_bw() +
+  theme(axis.text.y=element_blank(),
+        plot.title = element_text(face = "bold"))
 
 p
 ```
